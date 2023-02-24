@@ -350,13 +350,3 @@ function App() {
 }
 
 export default App;
-//  <div className="flex justify-center items-center h-screen ">
-//       <div className="flex justify-center  bg-gray-200  ">
-//         <button className="btn bg-indigo-200  hover:bg-indigo-800  ">
-//           BUTTON 1
-//         </button>
-//         <button className="btn bg-red-200   hover:bg-red-800  ">
-//           BUTTON 1
-//         </button>
-//       </div>
-//     </div>
