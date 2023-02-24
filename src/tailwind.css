@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn {
+    @apply px-4 h-12 inline-flex items-center rounded-lg hover:text-white;
+  }
+  .nav-link {
+    @apply flex items-center h-10 rounded px-3 text-sm hover:bg-gray-100 transition-colors dark:hover:bg-gray-800 dark:text-gray-300;
+  }
+  .nav-link.active {
+    @apply bg-bedirhan text-white;
+  }
+  .modal {
+    @apply fixed inset-0 rounded bg-bedirhan  bg-opacity-60 flex items-center transition-opacity justify-center opacity-0 invisible z-50;
+  }
+  .modal.active {
+    @apply visible opacity-100;
+  }
+  .modal-content {
+    @apply bg-white p-10 max-w-full min-w-[600px] dark:bg-gray-800;
+  }
+  .slider-item {
+    @apply border dark:border-green-700 flex flex-col px-4 py-5 rounded gap-12 items-center hover:!border-green-900;
+  }
+  .sidebar {
+    @apply w-full lg:w-64
+  dark:bg-gray-900 scale-90 lg:scale-100 
+    absolute lg:relative transition-all inset-0 top-16 lg:top-0 opacity-0 lg:opacity-100 invisible lg:visible flex-shrink-0 border-r p-3 flex flex-col border-gray-100 dark:border-gray-800 divide-solid divide-gray-300 dark:divide-gray-700 divide-y overflow-auto;
+  }
+  .sidebar.active {
+    @apply z-10 opacity-100 bg-white dark:bg-gray-900 visible scale-100;
+  }
+}
+
+@layer base {
+  @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+  html {
+    font-family: "Montserrat", sans-serif;
+  }
+}
+
+/*
+Breakpoint prefix	Minimum width	CSS
+sm	640px	@media (min-width: 640px) { ... }
+md	768px	@media (min-width: 768px) { ... }
+lg	1024px	@media (min-width: 1024px) { ... }
+xl	1280px	@media (min-width: 1280px) { ... }
+2xl	1536px	@media (min-width: 1536px) { ... }
+*/
